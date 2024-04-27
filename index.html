@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- FUENTES ÍCONOS ANIMACIONES-->
+    <link rel="stylesheet" href="./assets/fonts/dmsans/dmsans.css" /> <!--fuente-->
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css" /> <!--iconos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> <!--animación ANIMATE-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!--animación AOS-->
+    
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+
+    <!-- JAVASCRIPT -->
+    <script src="./JS/script.js" defer></script>
+    
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon"/>
+    <title>Movies</title>
+</head>
+
+
+<body>
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <nav class="navbar">  
+
+            <!-- LOGO -->
+            <div class="navbarLogo">
+                <a class="logo-link animate__animated animate__pulse" href="#">
+                    <span class="logo-name">
+                        M<i class="logo-icon fa-solid fa-moon"></i>vies
+                    </span>
+                </a>
+            </div>
+
+            <!-- MENÚ -->
+            <div class="navbar-nav">
+
+                
+                <!-- BOTON MENU MÓVIL -->
+                <div class="nav__mobile-btn">
+                    <a class="mobile-btn-link">
+                        <i class="fa-solid fa-bars"></i>
+                    </a>
+                </div>
+
+                <!-- MENU MÓVIL -->
+                <ul class="nav-list-mobile">
+                    <li class="nav-item-mobile">
+                        <a class="nav-link-mobile" href="#peliculas">Películas</a>
+                    </li>
+                    <li class="nav-item-mobile">
+                        <a class="nav-link-mobile" href="#aclamadas">Series</a>
+                    </li>
+                    <li class="nav-item-mobile">
+                        <a class="nav-link-mobile" href="#"> Mi Lista</a>
+                    </li>
+                    
+                </ul>
+
+                <!-- MENU ESCRITORIO -->
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#peliculas">Películas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#aclamadas">Series</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-plus"> </i> Mi Lista</a>
+                    </li>
+                    
+                </ul>
+
+                <ul class="nav-list2">
+                    <li class="nav-item-search">
+                        <form class="nav-search">
+
+                            <input class="search-input" type="text" name="search" id="search" placeholder="buscar">
+                            <div class="search-btn"> 
+                                <a  class="search-link" id="search">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </a>
+                            </div>
+                        </form>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" id="login" href="./PAGES/registrarse.html"><i class="fa-solid fa-circle-user"></i></a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- MAIN -->
+    <main class="main" id="main">
+
+        <!-- 1 -- HERO -->
+        <section class="hero animate__animated animate__zoomIn" >
+            
+            <h1 class="hero-title"> Suscribite! <i class="logo-icon fa-solid fa-moon"></i> <br> y disfrutá nuestro catálogo</h1>
+            <div class="hero-btn-container">
+                <a class="hero-btn1" href='./PAGES/registrarse.html'><i class="fa-solid fa-plus"></i> Suscribite!</a>
+                <a class="hero-btn2" href=#><i class="fa-solid fa-plus"></i> More Info</a>
+            </div>
+        </section>
+
+
+        <!-- 3 -- PELICULAS -->
+        <section class="peliculas" id="peliculas" data-aos="fade-up" data-aos-offset="150" data-aos-delay="50" data-aos-duration="2000">
+
+            <!-- HEADER PELICULAS -->
+            <div class="peliculas-header">
+                <h2 class="peliculas-title">Nuestras películas</h2>
+            </div>
+
+            <!-- PELICULAS Destacadas -->
+            <div class="carrousel-container">
+                <div class="carrousel-header">
+                    <h3 class="carrousel-title"> <span class="destacado">Destacadas</span> del mes</h3>
+                </div>
+
+                <div class="aclamadas-container">
+                    <ul class="aclamadas-list">
+                        <li class="aclamadas-item">
+                            <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                <img class="aclamadas-img" src="./assets/img/destacadas-pelicula1.jpeg" alt="">
+                                <div class="aclamadas-texto"> <h3>Logan</h3> </div>
+                            </a>
+                        </li>
+                        <li class="aclamadas-item">
+                            <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                <img class="aclamadas-img" src="./assets/img/destacadas-pelicula2.jpeg" alt="">
+                                <div class="aclamadas-texto"> <h3>Kill Bill</h3> </div>
+                            </a>
+                        </li>
+                        <li class="aclamadas-item">
+                            <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                <img class="aclamadas-img" src="./assets/img/destacadas-pelicula3.jpg" alt="">
+                                <div class="aclamadas-texto"> <h3> - 1917 -</h3> </div>
+                            </a>
+                        </li>
+                        <li class="aclamadas-item">
+                            <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                <img class="aclamadas-img" src="./assets/img/destacadas-pelicula4.webp" alt="">
+                                <div class="aclamadas-texto"> <h3>John Wick</h3> </div>
+                            </a>
+                        </li>
+                        <li class="aclamadas-item">
+                            <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                <img class="aclamadas-img" src="./assets/img/destacadas-pelicula5.jpeg" alt="">
+                                <div class="aclamadas-texto"> <h3>Peter Pan & Wendy</h3> </div>
+                            </a>
+                        </li>
+                        <li class="aclamadas-item">
+                            <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                <img class="aclamadas-img" src="./assets/img/destacadas-pelicula6.jpeg" alt="">
+                                <div class="aclamadas-texto"> <h3>Brave</h3> </div>
+                            </a>
+                        </li>
+                        <li class="aclamadas-item">
+                            <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                <img class="aclamadas-img" src="./assets/img/destacadas-pelicula7.jpeg" alt="">
+                                <div class="aclamadas-texto"> <h3>El Hobbit</h3> </div>
+                            </a>
+                        </li>
+                        <li class="aclamadas-item">
+                            <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                <img class="aclamadas-img" src="./assets/img/destacadas-pelicula8.jpg" alt="">
+                                <div class="aclamadas-texto"> <h3>Kung Fu Panda</h3> </div>
+                            </a>
+                        </li>
+                        <li class="aclamadas-item">
+                            <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                <img class="aclamadas-img" src="./assets/img/destacadas-pelicula9.jpeg" alt="">
+                                <div class="aclamadas-texto"> <h3>La Momia</h3> </div>
+                            </a>
+                        </li>
+                        <li class="aclamadas-item">
+                            <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                <img class="aclamadas-img" src="./assets/img/destacadas-pelicula10.webp" alt="">
+                                <div class="aclamadas-texto"> <h3>Fabricante de Lágrimas</h3> </div>
+                            </a>
+                        </li>
+                        <li class="aclamadas-item">
+                            <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                <img class="aclamadas-img" src="./assets/img/destacadas-pelicula11.webp" alt="">
+                                <div class="aclamadas-texto"> <h3>Deadpool & Wolverine</h3> </div>
+                            </a>
+                        </li>
+                        <li class="aclamadas-item">
+                            <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                <img class="aclamadas-img" src="./assets/img/destacadas-pelicula12.jpg" alt="">
+                                <div class="aclamadas-texto"> <h3>Dune: Parte 2</h3> </div>
+                            </a>
+                        </li>
+                        <li class="aclamadas-item">
+                            <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                <img class="aclamadas-img" src="./assets/img/destacadas-pelicula13.webp" alt="">
+                                <div class="aclamadas-texto"> <h3>Interstellar</h3> </div>
+                            </a>
+                        </li>
+                        <li class="aclamadas-item">
+                            <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                <img class="aclamadas-img" src="./assets/img/destacadas-pelicula14.webp" alt="">
+                                <div class="aclamadas-texto"> <h3>Manos de Tijera</h3> </div>
+                            </a>
+                        </li>
+                        <li class="aclamadas-item">
+                            <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                <img class="aclamadas-img" src="./assets/img/destacadas-pelicula15.jpeg" alt="">
+                                <div class="aclamadas-texto"> <h3>Dark Phoenix</h3> </div>
+                            </a>
+                        </li>
+                        <li class="aclamadas-item">
+                            <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                <img class="aclamadas-img" src="./assets/img/destacadas-pelicula16.jpeg" alt="">
+                                <div class="aclamadas-texto"> <h3>La Llegada</h3> </div>
+                            </a>
+                        </li>
+                        <li class="aclamadas-item">
+                            <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                <img class="aclamadas-img" src="./assets/img/destacadas-pelicula17.jpeg" alt="">
+                                <div class="aclamadas-texto"> <h3>Godzilla-Kong</h3> </div>
+                            </a>
+                        </li>
+                        <li class="aclamadas-item">
+                            <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                <img class="aclamadas-img" src="./assets/img/destacadas-pelicula18.jpeg" alt="">
+                                <div class="aclamadas-texto"> <h3>Cash Out</h3> </div>
+                            </a>
+                        </li>
+                        <li class="aclamadas-item">
+                            <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                <img class="aclamadas-img" src="./assets/img/destacadas-pelicula19.jpeg" alt="">
+                                <div class="aclamadas-texto"> <h3>The Sin</h3> </div>
+                            </a>
+                        </li>
+                        <li class="aclamadas-item">
+                            <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                <img class="aclamadas-img" src="./assets/img/destacadas-pelicula20.jpeg" alt="">
+                                <div class="aclamadas-texto"> <h3>The GoldFinger</h3> </div>
+                            </a>
+                        </li>
+                        <li class="aclamadas-item">
+                            <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                <img class="aclamadas-img" src="./assets/img/destacadas-pelicula21.jpeg" alt="">
+                                <div class="aclamadas-texto"> <h3>Train to Busan</h3> </div>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            <!-- PELICULAS Aclamadas : cloné con JavaScript-->
+
+            <!-- PELICULAS Colección -->
+            <div class="peliculas-coleccion">
+                <div class="coleccion-header">
+                    <h3 class="coleccion-title"> John Wick - Colección</h3>
+                    <p class="coleccion-text">•  John Wick,   •  J.W. Chapter2,  •  J.W. Chapter3,  •  J.W. Chapter4  </p>
+                    <a class="coleccion-btn" href=#><i class="fa-solid fa-play"></i> VER COLECCIÓN</a>
+                </div>
+            </div>
+
+            <!-- PELICULAS Catalogo -->
+            <div class="carrousel-container">
+                <div class="carrousel-header">
+                    <h3 class="carrousel-title"> <span class="destacado">Catálogo</span>  completo</h3>
+                </div>
+            
+                <ul class="peliculas-list">
+                    <li class="peliculas-item">
+                        <a class="peliculas-img-link" href="./pages/pelicula.html">
+                            <img class="peliculas-img" src="./assets/img/destacadas-pelicula17.jpeg" alt="">          
+                            <div class="peliculas-texto"> <h3>Godzilla-Kong</h3> </div>
+                        </a>
+                    </li>
+                    <li class="peliculas-item">
+                        <a class="peliculas-img-link" href="./pages/pelicula.html">
+                            <img class="peliculas-img" src="./assets/img/tendencia01.jpg" alt="">
+                            <div class="peliculas-texto"> <h3>True Detective 3</h3> </div>
+                        </a>
+                    </li>
+                    <li class="peliculas-item">
+                        <a class="peliculas-img-link" href="./pages/pelicula.html">
+                            <img class="peliculas-img" src="./assets/img/destacadas-pelicula7.jpeg" alt="">
+                            <div class="peliculas-texto"> <h3> The Hobbit</h3> </div>
+                        </a>
+                    </li>
+                    <li class="peliculas-item">
+                        <a class="peliculas-img-link" href="./pages/pelicula.html">
+                            <img class="peliculas-img" src="./assets/img/tendencia06.webp" alt="">
+                            <div class="peliculas-texto"> <h3>The Witcher</h3> </div>
+                        </a>
+                    </li>
+                    <li class="peliculas-item">
+                        <a class="peliculas-img-link" href="./pages/pelicula.html">
+                            <img class="peliculas-img" src="./assets/img/tendencia04.jpeg" alt="">
+                            <div class="peliculas-texto"> <h3>M N P A</h3> </div>
+                        </a>
+                    </li>
+                    <li class="peliculas-item">
+                        <a class="peliculas-img-link" href="./pages/pelicula.html">
+                            <img class="peliculas-img" src="./assets/img/tendencia05.jpeg" alt="">
+                            <div class="peliculas-texto"> <h3>Desconocido</h3> </div>
+                        </a>
+                    </li>
+                    <li class="peliculas-item">
+                        <a class="peliculas-img-link" href="./pages/pelicula.html">
+                            <img class="peliculas-img" src="./assets/img/pelisculas7.webp" alt="">
+                            <div class="peliculas-texto"> <h3>Deadpool & Lobenzo</h3> </div>
+                        </a>
+                    </li>
+                    <li class="peliculas-item">
+                        <a class="peliculas-img-link" href="./pages/pelicula.html">
+                            <img class="peliculas-img" src="./assets/img/tendencia07.jpeg" alt="">
+                            <div class="peliculas-texto"> <h3>Breaking Bad</h3> </div>
+                        </a>
+                    </li>
+                    <li class="peliculas-item">
+                        <a class="peliculas-img-link" href="./pages/pelicula.html">
+                            <img class="peliculas-img" src="./assets/img/destacadas-pelicula15.jpeg" alt="">
+                            <div class="peliculas-texto"> <h3>Dark Phoenix</h3> </div>
+                        </a>
+                    </li>
+                    <li class="peliculas-item">
+                        <a class="peliculas-img-link" href="./pages/pelicula.html">
+                            <img class="peliculas-img" src="./assets/img/peliculas7.webp" alt="">
+                            <div class="peliculas-texto"> <h3>Nobody</h3> </div>
+                        </a>
+                    </li>
+                    <li class="peliculas-item">
+                        <a class="peliculas-img-link" href="./pages/pelicula.html">
+                            <img class="peliculas-img" src="./assets/img/peliculas8.webp" alt="">
+                            <div class="peliculas-texto"> <h3>El Iusionista</h3> </div>
+                        </a>
+                    </li>
+                    <li class="peliculas-item">
+                        <a class="peliculas-img-link" href="./pages/pelicula.html">
+                            <img class="peliculas-img" src="./assets/img/peliculas10.webp" alt="">
+                            <div class="peliculas-texto"> <h3>Duna</h3> </div>
+                        </a>
+                    </li>
+                    <li class="peliculas-item">
+                        <a class="peliculas-img-link" href="./pages/pelicula.html">
+                            <img class="peliculas-img" src="./assets/img/peliculas9.jpg" alt="">
+                            <div class="peliculas-texto"> <h3>La forma del agua</h3> </div>
+                        </a>
+                    </li>
+                    <li class="peliculas-item">
+                        <a class="peliculas-img-link" href="./pages/pelicula.html">
+                            <img class="peliculas-img" src="./assets/img/tendencia13.jpeg" alt="">
+                            <div class="peliculas-texto"> <h3>Mi vecino Totoro</h3> </div>
+                        </a>
+                    </li>
+                    <li class="peliculas-item">
+                        <a class="peliculas-img-link" href="./pages/pelicula.html">
+                            <img class="peliculas-img" src="./assets/img/peliculas11.webp" alt="">
+                            <div class="peliculas-texto"> <h3>The last Samurai</h3> </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- BOTON -->
+            <div class="peliculas-btn-container">
+                <a class="peliculas-btn" href="#"> Ver más </a>
+            </div>
+        </section>
+
+
+        <!-- 4-- SERIES -->
+        <section class="aclamadas" id="aclamadas" data-aos="fade-up" data-aos-offset="150" data-aos-delay="50" data-aos-duration="2000">
+            
+            <!-- HEADER aclamadas -->
+            <div class="aclamadas-header">
+                <h2 class="aclamadas-title">Nuestras Series</h2>
+            </div>
+
+            <!-- PELICULAS Destacadas -->
+            <div class="carrousel-container">
+                <div class="carrousel-header">
+                    <h3 class="carrousel-title"> <span class="destacado">Populares</span> del 2024</h3>
+                </div>
+            
+                <div class="aclamadas-container">
+                    <ul class="aclamadas-list">
+                        <li class="aclamadas-item">
+                            <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                <img class="aclamadas-img" src="./assets/img/populares-serie0.jpg" alt="">
+                                <div class="aclamadas-texto"> <h3>Logan</h3> </div>
+                            </a>
+                        </li>
+                                    <li class="aclamadas-item">
+                                        <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                            <img class="aclamadas-img" src="./assets/img/populares-serie1.jpg" alt="">
+                                            <div class="aclamadas-texto"> <h3>Kill Bill</h3> </div>
+                                        </a>
+                                    </li>
+                                    <li class="aclamadas-item">
+                                        <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                            <img class="aclamadas-img" src="./assets/img/populares-serie2.jpg" alt="">
+                                            <div class="aclamadas-texto"> <h3> - 1917 -</h3> </div>
+                                        </a>
+                                    </li>
+                                    <li class="aclamadas-item">
+                                        <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                            <img class="aclamadas-img" src="./assets/img/populares-serie3.jpg" alt="">
+                                            <div class="aclamadas-texto"> <h3>John Wick</h3> </div>
+                                        </a>
+                                    </li>
+                                    <li class="aclamadas-item">
+                                        <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                            <img class="aclamadas-img" src="./assets/img/populares-serie4.jpg" alt="">
+                                            <div class="aclamadas-texto"> <h3>Peter Pan & Wendy</h3> </div>
+                                        </a>
+                                    </li>
+                                    <li class="aclamadas-item">
+                                        <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                            <img class="aclamadas-img" src="./assets/img/populares-serie5.webp" alt="">
+                                            <div class="aclamadas-texto"> <h3>Brave</h3> </div>
+                                        </a>
+                                    </li>
+                                    <li class="aclamadas-item">
+                                        <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                            <img class="aclamadas-img" src="./assets/img/populares-serie6.jpg" alt="">
+                                            <div class="aclamadas-texto"> <h3>El Hobbit</h3> </div>
+                                        </a>
+                                    </li>
+                                    <li class="aclamadas-item">
+                                        <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                            <img class="aclamadas-img" src="./assets/img/populares-serie7.jpg" alt="">
+                                            <div class="aclamadas-texto"> <h3>Kung Fu Panda</h3> </div>
+                                        </a>
+                                    </li>
+                                    <li class="aclamadas-item">
+                                        <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                            <img class="aclamadas-img" src="./assets/img/populares-serie8.jpg" alt="">
+                                            <div class="aclamadas-texto"> <h3>La Momia</h3> </div>
+                                        </a>
+                                    </li>
+                                    <li class="aclamadas-item">
+                                        <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                            <img class="aclamadas-img" src="./assets/img/populares-serie9.jpg" alt="">
+                                            <div class="aclamadas-texto"> <h3>Fabricante de Lágrimas</h3> </div>
+                                        </a>
+                                    </li>
+                                    <li class="aclamadas-item">
+                                        <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                            <img class="aclamadas-img" src="./assets/img/populares-serie10.jpg" alt="">
+                                            <div class="aclamadas-texto"> <h3>Deadpool & Wolverine</h3> </div>
+                                        </a>
+                                    </li>
+                                    <li class="aclamadas-item">
+                                        <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                            <img class="aclamadas-img" src="./assets/img/populares-serie11.jpg" alt="">
+                                            <div class="aclamadas-texto"> <h3>Dune: Parte 2</h3> </div>
+                                        </a>
+                                    </li>
+                                    <li class="aclamadas-item">
+                                        <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                            <img class="aclamadas-img" src="./assets/img/populares-serie12.jpg" alt="">
+                                            <div class="aclamadas-texto"> <h3>Interstellar</h3> </div>
+                                        </a>
+                                    </li>
+                                    <li class="aclamadas-item">
+                                        <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                            <img class="aclamadas-img" src="./assets/img/populares-serie13.jpg" alt="">
+                                            <div class="aclamadas-texto"> <h3>Manos de Tijera</h3> </div>
+                                        </a>
+                                    </li>
+                                    <li class="aclamadas-item">
+                                        <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                            <img class="aclamadas-img" src="./assets/img/populares-serie14.jpg" alt="">
+                                            <div class="aclamadas-texto"> <h3>Dark Phoenix</h3> </div>
+                                        </a>
+                                    </li>
+                                    <li class="aclamadas-item">
+                                        <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                            <img class="aclamadas-img" src="./assets/img/populares-serie15.jpg" alt="">
+                                            <div class="aclamadas-texto"> <h3>La Llegada</h3> </div>
+                                        </a>
+                                    </li>
+                                    <li class="aclamadas-item">
+                                        <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                            <img class="aclamadas-img" src="./assets/img/destacadas-pelicula17.jpeg" alt="">
+                                            <div class="aclamadas-texto"> <h3>Godzilla-Kong</h3> </div>
+                                        </a>
+                                    </li>
+                                    <li class="aclamadas-item">
+                                        <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                            <img class="aclamadas-img" src="./assets/img/populares-serie16.jpg" alt="">
+                                            <div class="aclamadas-texto"> <h3>Cash Out</h3> </div>
+                                        </a>
+                                    </li>
+                                    <li class="aclamadas-item">
+                                        <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                            <img class="aclamadas-img" src="./assets/img/populares-serie17.jpg" alt="">
+                                            <div class="aclamadas-texto"> <h3>The Sin</h3> </div>
+                                        </a>
+                                    </li>
+                                    <li class="aclamadas-item">
+                                        <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                            <img class="aclamadas-img" src="./assets/img/populares-serie18.jpg" alt="">
+                                            <div class="aclamadas-texto"> <h3>The GoldFinger</h3> </div>
+                                        </a>
+                                    </li>
+                                    <li class="aclamadas-item">
+                                        <a class="aclamadas-img-link" href="./pages/pelicula.html">
+                                            <img class="aclamadas-img" src="./assets/img/populares-serie20.jpg" alt="">
+                                            <div class="aclamadas-texto"> <h3>Train to Busan</h3> </div>
+                                        </a>
+                                    </li>
+                                    
+                    </ul>
+                </div>
+            </div>
+
+             <!-- SERIES Colección -->
+            <div class="series-coleccion">
+                <div class="coleccion-header">
+                    <h3 class="coleccion-title"> True Detective - Colección</h3>
+                    <p class="coleccion-text">•  Season1  •  Season2,  •  Season3,  •  Season4 </p>
+                    <a class="coleccion-btn" href=#><i class="fa-solid fa-play"></i> VER COLECCIÓN</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+        
+            <ul class="footer-list">
+                <li class="footer-item">
+                    <a class="footer-link" href="#"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li class="footer-item">
+                    <a class="footer-link" href="#"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li class="footer-item">
+                    <a class="footer-link" href="#"><i class="fab fa-tiktok"></i></a>
+                </li>
+                <li class="footer-item">
+                    <a class="footer-link" id="administrador" href="#"># Escribinos y comentá tu experiencia!</a>
+                </li>
+            </ul>
+
+            <div class="footer__description">
+                <div class="footer__text">
+                    || &copy; Copyright 2024. Todos los derechos reservado.
+                </div>
+            </div>
+        </div>
+
+
+        
+
+        
+        <div class="footer-subir">
+            <a class="footer-subir-link" href="#main">
+                <i class="footer-icon fa-solid fa-circle-chevron-up"></i>
+            </a>
+        </div>
+    </footer>
+
+
+    <!-- JS ANIMACIÓN AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script> AOS.init();</script>
+
+    
+</body>
+</html>
