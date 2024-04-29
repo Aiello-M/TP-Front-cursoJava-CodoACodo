@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
 
 
-    // HEADER --> cambiar color fondo con scroll
+    // HEADER NAVBAR --> cambiar color fondo con scroll
     window.addEventListener('scroll', function() {
         var navbar = document.querySelector(".header");
         if (window.scrollY > 150) {
@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
 
-    //REDIMENSIONADO (al profe se le sigue viendo el menú de hamburguesa al agrandar. A mi no)
+    //REDIMENSIONADO (para que no se vea menú de hamburguesa en pantalla grande)
     window.addEventListener("resize", () => {
         let win = parseFloat.document.body.clientWidth;
 

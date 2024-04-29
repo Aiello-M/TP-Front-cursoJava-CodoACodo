@@ -4,7 +4,7 @@
     --color-secondary: #fff;
     --color-blue: rgb(89, 29, 200);
     --color-gradient: linear-gradient(to right, rgb(11, 203, 254), rgb(64, 123, 254), rgb(89, 29, 200));
-    --color-background: #181419;   
+    --color-background: #1e1a20;   
     --color-input: #333333;
     --color-search: rgba(120, 152, 240, 0.375);
 }
@@ -131,7 +131,7 @@ body{
 
 /* subrayado al hacer hover */
 .nav-link::before, .nav-link-mobile::before, .mobile-btn-link::before,
-.search-link::before, .signin-btn::before, .signin-help:hover,
+.search-link::before, .signin-btn::before, 
 .hero-btn1::before, .hero-btn2::before, 
 .coleccion-btn::before, .peliculas-btn::before{
     content: "";
@@ -140,7 +140,7 @@ body{
     background-color: var(--color-blue);
 
     position: absolute; /*posiconarlo segun su padre nav-item que es relative */
-    bottom: 0; /* la línea está 1.2rem encima del bottom (tener en cuenta el line-height para saber dónde empieza el bottom) */
+    bottom: 0; 
     left: 0;
     opacity: 0;
 
@@ -195,7 +195,7 @@ body{
     background-clip: text;
     -webkit-background-clip: text;
   
-    display: flex; /*para centrar verticalmente el icono lupa */
+    display: flex; /*centrar verticalmente icono lupa */
     align-items: center;
 } 
 
@@ -229,7 +229,6 @@ body{
 /* (1) HERO */
 
 .hero{
-    /*position: relative; para posicionar facilmente los subelementos contenidos con absolute */
     width: 100%;
     height: 100vh ;
     padding: 0 0 10% 10%;
@@ -301,20 +300,17 @@ body{
 
 
 
-/* (3) PELICULAS  &  (4) aclamadas */
+/* (3) PELICULAS  &  (4) SERIES (aclamadas) */
 
 .peliculas,
 .aclamadas{
-    margin: 4rem 12%; /*margen 12% en costados */
-    /* otra forma de hacerlo:
-    width: 76%;
-    margin: 4rem auto; */
+    margin: 4rem 12%; 
     position: relative;
 
     display: flex;
-    flex-direction: column; /* la lista debajo del título, alineados en columna */
-    align-items: center; /* centrados horizontalmente */
-    justify-content: center; /*centrados verticalmente */
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
     gap: 1rem;     
 }
 
@@ -325,14 +321,14 @@ body{
     border-bottom: 10px;
 }
 .peliculas::after {
-    content: ''; /* Obligatorio para pseudo-elementos */
-    position: absolute; /* Para posicionar relativo al contenedor */
-    bottom: 0; /* Lo posiciona al final del contenedor */
-    left: 50%; /* Lo posiciona al centro del contenedor */
-    transform: translateX(-50%); /* Lo mueve a la izquierda para centrarlo */
-    width: 60%; /* Ancho de la línea */
-    height: 1.5px; /* Grosor de la línea */
-    background-color: var(--color-blue); /* Color de la línea */
+    content: ''; 
+    position: absolute; 
+    bottom: 0;
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 60%; 
+    height: 1.5px; 
+    background-color: var(--color-blue);
 }
 
 .aclamadas{
@@ -404,7 +400,7 @@ body{
 .aclamadas-item{
     position: relative; /*para posicionar el título con absolute */
     margin-bottom: 1rem;
-    width: 19rem; /*20*/
+    width: 19rem; 
     height: 27.8rem;    
     border-radius:1rem;
     overflow: hidden; /*oculta imagen que sobresale al hacer hover */  
@@ -438,7 +434,7 @@ body{
     position: absolute;
     bottom: 0rem;
     
-    background-color: rgba(24, 20, 25, 0.76); /*#181419a8; */   
+    background-color: rgba(24, 20, 25, 0.76); 
     transition: all 250ms ease-in-out;
 }
 
@@ -463,7 +459,7 @@ body{
 
 /* SCROLLBAR: elemento que envuelve al conjunto */
 ::-webkit-scrollbar{
-    height: 12px; /*scroll horizontal de peliculas */ 
+    height: 12px; /*scroll horizontal de peliculas y series*/ 
     width: 12px; /*scroll vertical de la página web */
 }
 
@@ -516,12 +512,12 @@ body{
 /* BOTONES peliculas*/
 .peliculas-btn-container{
     display: flex;
+    justify-content: center;
     gap: 2rem;
-    margin-top: 3rem;
+    margin-top: 8rem;
 }
 
 .peliculas-btn {
-    /* padding: 0 1rem; */
     font-size: 2rem;
 }
 
@@ -625,10 +621,9 @@ body{
 
 
 
-/* --- ESTILOS DE PÁGINA: LOGIN SIGNIN --- */
+/* --- ESTILOS DE PÁGINA: REGISTRO SIGNIN --- */
 /* ----------------------------------------*/
 
-.login-body,
 .signin-body{
     background-image: -webkit-linear-gradient(left, rgba(46, 45, 45, 0.5) , rgba(46, 45, 45, 0.3) ), url("../assets/img/hero.jpg"); 
     background-size: cover; 
@@ -637,8 +632,7 @@ body{
 }
 
 
-/* LOGIN & SIGNIN - HEADER */
-.header-login,
+/* REGISTRO SIGNIN - HEADER */
 .header-signin{
     height: 13vh;
     top: 0;
@@ -651,7 +645,6 @@ body{
 /* --Formulario-- */
 
 /* CONTENEDOR FORMULARIO*/
-.login-container,
 .signin-container{
     width: 40rem;
     margin: 12rem auto 0rem;
@@ -668,7 +661,6 @@ body{
 }
 
 /* FORMULARIO */
-.login-form,
 .signin-form{
     width: 80%; 
     display: flex;
@@ -678,10 +670,6 @@ body{
     gap: 1.6rem;
 }
 
-.login-form{
-    padding: 6rem 0 3rem;
-}
-
 form h2{
     width: 100%;
     font-size: 3rem;
@@ -689,7 +677,6 @@ form h2{
     text-align: center;
 }
 
-.login-form input:not(.check, .login-btn),
 .signin-form input:not(.check, .signin-btn),
 .signin-form select{  
     width: 25rem;
@@ -716,19 +703,18 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 #pais{
-    /* Ocultar icono de select porque se ve desfazado*/
+    /* Oculto icono de select porque se ve desfazado*/
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none; 
         
-    /* Agregar icono con estilo personalizado */
+    /* Agrego icono con estilo personalizado */
     background-image: url('../assets/img/icono-form-select.png');
     background-repeat: no-repeat;
     background-position: right 1.8rem center; 
     background-size: 25px 25px;
 }
 
-.login-remember,
 .signin-legal{
     margin-left: 1rem;
     display: flex;
@@ -741,8 +727,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     width: 100%;
 }
 
-.login-remember .check,
-.login-remember .check-txt,
 .signin-legal .check,
 .signin-legal .check-txt{
     width: auto;
@@ -755,7 +739,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     width: 100%;
 }
 
-.login-btn,
 .signin-btn{
     margin: 0 auto;
     display: flex;
@@ -768,11 +751,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 
-.login-forget,
-.login-register,
 .signin-help{
     width: fit-content;
-    margin: 0 auto; /*centrar enlaces horizontalmente */
+    margin: 0 auto; 
     
     color: #dfd1d1e4;
     text-align: center;
@@ -781,17 +762,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     transition:  all 250ms ease-in-out; 
 }
 
-.login-forget{
-    width: 80%;
-    margin-top: -1rem;
-}
-.login-register{
-    width: 80%;
-    margin-top: -2.5rem;
-}
-
-.login-forget:hover,
-.login-register:hover,
 .signin-help:hover{
     box-shadow: 0px 0px 30px rgb(0,0,0,0.4), 0px 0px 10px rgba(236, 233, 233, 0.135);
     transform: scale(0.97);
@@ -802,7 +772,24 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 
 
+@keyframes pulseHover {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
 
+/* index - login - signin */
+.navbarLogo .logo-link:hover,
+.header-signin .logo-link:hover,
+.header-login .logo-link:hover {
+    animation: pulseHover 1s 2; 
+}
 
 
 
