@@ -131,7 +131,7 @@ body{
 
 /* subrayado al hacer hover */
 .nav-link::before, .nav-link-mobile::before, .mobile-btn-link::before,
-.search-link::before, .signin-btn::before, 
+.search-link::before, .signin-btn::before, .login-btn::before,
 .hero-btn1::before, .hero-btn2::before, 
 .coleccion-btn::before, .peliculas-btn::before{
     content: "";
@@ -268,7 +268,7 @@ body{
 }
 .hero-btn1, .hero-btn2, 
 .coleccion-btn, .peliculas-btn,
-.signin-btn{
+.signin-btn, .login-btn{
     margin-top: 1rem;
     padding: 1rem 1.6rem;
     
@@ -621,10 +621,10 @@ body{
 
 
 
-/* --- ESTILOS DE PÁGINA: REGISTRO SIGNIN --- */
+/* --- PÁGINAS: REGISTRO y LOGIN --- */
 /* ----------------------------------------*/
 
-.signin-body{
+.signin-body, .login-body{
     background-image: -webkit-linear-gradient(left, rgba(46, 45, 45, 0.5) , rgba(46, 45, 45, 0.3) ), url("../assets/img/hero.jpg"); 
     background-size: cover; 
     background-repeat: no-repeat;
@@ -633,7 +633,7 @@ body{
 
 
 /* REGISTRO SIGNIN - HEADER */
-.header-signin{
+.header-signin, .header-login{
     height: 13vh;
     top: 0;
     display: flex;
@@ -641,24 +641,59 @@ body{
     background-color: transparent; 
 }
 
+.error-message{
+    width: 25rem;
+    height: fit-content; 
+    padding: 0 2rem; 
+
+    color: #bb0111;
+    background-color: rgb(252, 173, 186);
+    border: 1px solid #bb0111;
+    border-radius: 1rem;
+
+    font-size: 14px;
+    text-align: center;
+    padding:0.5rem 1rem;
+    
+    display: none; 
+}
+
+.error-msg{
+    /* position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 0;
+    z-index: 1;  */
+    /* background-color: rgba(255, 255, 255, 0.9); 
+    border: 1px solid red; 
+    border-radius: 0.3rem; */
+
+    width: 23rem;
+    color: red;
+    font-size: 12px;
+    margin-top: -20px;
+    margin-bottom: -10px;
+    visibility: hidden; 
+}
+
+
 
 /* --Formulario-- */
 
 /* CONTENEDOR FORMULARIO*/
-.signin-container{
+.signin-container, .login-container{
     width: 40rem;
     margin: 12rem auto 0rem;
     padding: 2rem; 
+
+    width: 70rem;
+    height: fit-content;
     
     display: flex;
     justify-content: center;
     background-color: rgba(29, 28, 32, 0.68);
 }
 
-.signin-container{
-    width: 70rem;
-    height: fit-content;
-}
 
 /* FORMULARIO */
 .signin-form{
@@ -670,6 +705,13 @@ body{
     gap: 1.6rem;
 }
 
+.login-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+}
+
 form h2{
     width: 100%;
     font-size: 3rem;
@@ -678,10 +720,13 @@ form h2{
 }
 
 .signin-form input:not(.check, .signin-btn),
+.login-form input:not(.check, .login-btn),
 .signin-form select{  
+    position: relative; /* todo: yo */
     width: 25rem;
     height: 3.5rem; 
     padding: 0 2rem; 
+    margin-bottom: 1rem;  /*todo lo agregue yo */
     font-size: 1.6rem;
     font-weight: 300;
 
@@ -715,7 +760,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     background-size: 25px 25px;
 }
 
-.signin-legal{
+.signin-legal, .login-remember{
     margin-left: 1rem;
     display: flex;
     justify-content: center;
@@ -723,23 +768,31 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     gap: 0.8rem;
 }
 
-.signin-legal{
+.login-remember{
+    justify-content: start;
+}
+
+.signin-legal, .login-remember{
     width: 100%;
 }
 
 .signin-legal .check,
-.signin-legal .check-txt{
+.login-remember .check,
+.signin-legal .check-txt,
+.login-remember .check-txt{
     width: auto;
     font-size: 1.2rem;
     font-weight: 400;
 }
 
 .signin-btn-container,
-.signin-help-container{
+.login-btn-container,
+.signin-help-container,
+.login-registrarse-container{
     width: 100%;
 }
 
-.signin-btn{
+.signin-btn, .login-btn{
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -751,7 +804,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 
-.signin-help{
+.signin-help,
+.login-registrarse{
     width: fit-content;
     margin: 0 auto; 
     
@@ -762,7 +816,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     transition:  all 250ms ease-in-out; 
 }
 
-.signin-help:hover{
+.signin-help:hover,
+.login-registrarse:hover{
     box-shadow: 0px 0px 30px rgb(0,0,0,0.4), 0px 0px 10px rgba(236, 233, 233, 0.135);
     transform: scale(0.97);
 }

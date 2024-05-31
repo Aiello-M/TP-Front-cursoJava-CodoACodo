@@ -258,20 +258,25 @@
         }   
     }
 
-    /* REGISTRO */
-    .signin-container{
+    /* REGISTRO y LOGIN*/
+    .signin-container,
+    .login-container{
         width: 55rem;
         height: fit-content;
     }
     
-    /* FORMULARIO */
-    .signin-form{
+    .signin-form,
+    .login-form{
         width: 90%;
     }
 
     .login-form input:not(.check, .login-btn),
     .signin-form input:not(.check, .signin-btn),
     .signin-form select{  
+        width: 22rem;
+    }
+
+    .login-remember{
         width: 22rem;
     }
 }
@@ -345,6 +350,15 @@
     }
     
 
+
+    /* FOOTER */
+    .footer-list{
+        flex-wrap: wrap;
+        gap: 1rem;
+        text-align: center;
+    }
+
+
     /* PAGES: LOGIN & SIGNIN */
     .login-container,
     .signin-container{
@@ -357,22 +371,16 @@
         padding: 1rem 0 3rem;
     }
 
-    form h2{ font-size: 2.5rem; }
-
-
-    /* FOOTER */
-    .footer-list{
-        flex-wrap: wrap;
-        gap: 1rem;
-        text-align: center;
-    }
-
-    /* REGISTRARSE */
     .signin-form{
         flex-direction: column;
         align-items: center;
     }
 
+    form h2{ font-size: 2.5rem; } 
+
+    .login-remember{
+        width: 21rem;
+    }
 }
 
 
@@ -423,17 +431,20 @@
     }
 
 
-      /* REGISTRO */
-    .signin-container{
+      /* PAGES: REGISTRO y LOGIN */
+    .signin-container, .login-container{
         width: 28rem;
         height: fit-content;
     } 
     
-    /* FORMULARIO */
     .login-form input:not(.check, .login-btn),
     .signin-form input:not(.check, .signin-btn),
     .signin-form select{  
         width: 19rem;
+    }
+
+    .login-remember{
+        width: 18rem;
     }
 
 } 
