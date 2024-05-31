@@ -271,14 +271,20 @@
     }
 
     .login-form input:not(.check, .login-btn),
-    .signin-form input:not(.check, .signin-btn),
-    .signin-form select{  
-        width: 22rem;
+    .login-remember,
+    .error-message{  
+        width: 25rem;
     }
 
-    .login-remember{
-        width: 22rem;
+    .signin-form input:not(.check, .signin-btn),
+    .signin-form select, .input-container{
+        width:21rem;
     }
+
+    .error-msg{
+        width: 24rem;
+    }
+    
 }
 
 
@@ -370,17 +376,42 @@
     .signin-form{
         padding: 1rem 0 3rem;
     }
-
     .signin-form{
-        flex-direction: column;
-        align-items: center;
+        gap: 2.5rem;
     }
 
     form h2{ font-size: 2.5rem; } 
 
-    .login-remember{
-        width: 21rem;
+    .login-form input:not(.check, .login-btn),
+    .login-remember, .error-message{  
+        width: 22rem;
     }
+
+    #signup-error{
+        width: 21rem;
+        margin: 0 auto;
+    }
+
+    .signin-form input:not(.check, .signin-btn),
+    .signin-form select, .input-container{
+        width:21rem;
+    }
+    .input-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .error-msg, .error-txt{
+        width: 21rem;
+        margin-left: 3rem;
+    }
+
+    .signin-legal{
+        margin-top: 1rem;
+    }
+    
 }
 
 
@@ -443,8 +474,23 @@
         width: 19rem;
     }
 
-    .login-remember{
+    /* .login-remember{
+        width: 18rem;
+    } */
+
+    .login-form input:not(.check, .login-btn),
+    .signin-form input:not(.check, .signin-btn),
+    .signin-form select, .login-remember,
+    .error-message{  
         width: 18rem;
     }
 
+    .error-msg, .error-txt{
+        width: 18rem;
+    }
+
+    #signup-error{
+        width: 18rem;
+        margin: 0 auto;
+    }
 } 

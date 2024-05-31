@@ -658,22 +658,34 @@ body{
     display: none; 
 }
 
-.error-msg{
-    /* position: absolute;
-    top: 100%;
-    left: 0;
-    margin-top: 0;
-    z-index: 1;  */
-    /* background-color: rgba(255, 255, 255, 0.9); 
-    border: 1px solid red; 
-    border-radius: 0.3rem; */
+#signup-error{
+    width: 100%;
+    margin: 0 13rem;
+}
 
+.error-msg{
     width: 23rem;
-    color: red;
+    color: rgb(255, 112, 112);
     font-size: 12px;
     margin-top: -20px;
     margin-bottom: -10px;
     visibility: hidden; 
+}
+
+.error-txt{
+    width: 23rem;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    margin-left: 10px;
+    
+    font-size: 12px;
+    color: rgb(255, 112, 112);
+    visibility: hidden;  
+}
+
+#legal-error{
+    width: 100%;
+    text-align: center;
 }
 
 
@@ -702,7 +714,7 @@ body{
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 1.6rem;
+    gap: 2rem;
 }
 
 .login-form{
@@ -722,14 +734,13 @@ form h2{
 .signin-form input:not(.check, .signin-btn),
 .login-form input:not(.check, .login-btn),
 .signin-form select{  
-    position: relative; /* todo: yo */
     width: 25rem;
     height: 3.5rem; 
     padding: 0 2rem; 
-    margin-bottom: 1rem;  /*todo lo agregue yo */
+    margin-bottom: 1rem; 
+    
     font-size: 1.6rem;
     font-weight: 300;
-
     border: 1px solid var(--color-primary);
     border-radius: 1.5rem;
     background-color: var(--color-input);
