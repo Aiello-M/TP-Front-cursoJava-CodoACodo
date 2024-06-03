@@ -133,7 +133,7 @@ body{
 .nav-link::before, .nav-link-mobile::before, .mobile-btn-link::before,
 .search-link::before, .signin-btn::before, .login-btn::before,
 .hero-btn1::before, .hero-btn2::before, 
-.coleccion-btn::before, .peliculas-btn::before{
+.coleccion-btn::before, .peliculas-btn::before, .series-btn::before, #inicioPersonajesBtn::before{
     content: "";
     height: 0.2rem;
     width: 0; /* al inicio 0 de ancho */
@@ -151,12 +151,16 @@ body{
 .nav-link-mobile:hover:before, .mobile-btn-link:hover:before,
 .hero-btn1:hover:before, .hero-btn2:hover:before,
 .signin-btn:hover:before, .login-btn:hover:before,
-.coleccion-btn:hover::before, .peliculas-btn:hover:before{
+.coleccion-btn:hover::before, .peliculas-btn:hover:before, .series-btn:hover::before, #inicioPersonajesBtn:hover::before{
     width: 100%;
     opacity: 1;
 }
 
-
+#inicioPersonajesBtn{
+    width: fit-content;
+    align-self: center;
+    background-color: black;
+}
 
 /* BUSCADOR */
 .nav-search{
@@ -267,7 +271,7 @@ body{
     gap: 2rem;
 }
 .hero-btn1, .hero-btn2, 
-.coleccion-btn, .peliculas-btn,
+.coleccion-btn, .peliculas-btn,.series-btn, #inicioPersonajesBtn,
 .signin-btn, .login-btn{
     margin-top: 1rem;
     padding: 1rem 1.6rem;
@@ -279,12 +283,16 @@ body{
     border-radius: 6px;
     transition: all 300ms ease-in-out;
 }
+
+#inicioPersonajesBtn{
+    background-color: transparent;
+}
 .hero-btn2{
     background-color: rgba(0, 0, 0, 0.7);
 }
 
 .hero-btn1:hover,.hero-btn2:hover, 
-.coleccion-btn:hover, .peliculas-btn:hover,
+.coleccion-btn:hover, .peliculas-btn:hover, .series-btn:hover, #inicioPersonajesBtn:hover,
 .login-btn:hover,.signin-btn:hover{
     background-color: transparent;
     transform: scale(0.97);
@@ -364,7 +372,8 @@ body{
     font-weight: 600;
     text-transform: uppercase;
 }
-.carrousel-title .destacado {
+.carrousel-title .destacado,
+.character-description .destacado {
     background-color: var(--color-blue);
     padding: 0 0.8rem;
     border-radius: 2px;
@@ -373,7 +382,8 @@ body{
 
 
 /* LISTAS */
-.peliculas-list{
+.peliculas-list,
+.personajes-list{
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -397,15 +407,21 @@ body{
 }
 
 .peliculas-item,
-.aclamadas-item{
+.aclamadas-item,
+.personajes-item{
     position: relative; /*para posicionar el título con absolute */
     margin-bottom: 1rem;
     width: 19rem; 
-    height: 27.8rem;    
+    height: 27.8rem;   
     border-radius:1rem;
     overflow: hidden; /*oculta imagen que sobresale al hacer hover */  
 
 }
+
+.personajes-item{
+    height: 19rem; 
+}
+
 
 .aclamadas-item{
     width: 16.5rem;
@@ -413,6 +429,7 @@ body{
 }
 
 .peliculas-img,
+.personajes-img,
 .aclamadas-img{
     width: 100%;
     border-radius: 1rem;
@@ -420,11 +437,13 @@ body{
 }
 
 .peliculas-img-link:hover .peliculas-img,
+.personajes-img-link:hover .personajes-img,
 .aclamadas-img-link:hover .aclamadas-img{
     transform: scale(1.05);
 }
 
 .peliculas-texto,
+.personajes-texto,
 .aclamadas-texto{
     visibility: hidden;
     width: 100%; /*ancho del padre: peliculas-item */
@@ -439,6 +458,7 @@ body{
 }
 
 .peliculas-texto h3,
+.personajes-texto h3,
 .aclamadas-texto h3{
     color: var(--color-secondary);
     text-align: center;
@@ -446,10 +466,10 @@ body{
 }
 
 .peliculas-img-link:hover .peliculas-texto,
+.personajes-img-link:hover .personajes-texto,
 .aclamadas-img-link:hover .aclamadas-texto{
     visibility: visible;
 }
-
 
 
 
@@ -510,14 +530,22 @@ body{
 
 
 /* BOTONES peliculas*/
-.peliculas-btn-container{
+.peliculas-btn-container,
+.series-btn-container{
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 2rem;
     margin-top: 8rem;
 }
 
-.peliculas-btn {
+#inicioPersonajesBtn{
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.peliculas-btn,
+.series-btn {
     font-size: 2rem;
 }
 
@@ -859,3 +887,72 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 
 
+
+
+/* CARD */
+.character-info-card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 80%;
+    max-width: 800px;
+    height: 80vh;
+    background: linear-gradient(to top left, rgba(0, 0, 0, 1), rgb(24, 11, 31), rgb(34, 31, 73));
+    color: white;
+    padding: 20px;
+    font-size: 1.6rem;
+    z-index: 1000;
+    border-radius: 10px;
+    display: none; 
+    overflow: hidden;
+}
+
+.character-info-card .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.character-info-card .character-details {
+    display: flex;
+    height: 100%;
+}
+
+.character-info-card .character-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.character-info-card .character-img {
+    width: 80%;
+    height: 80%; 
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.character-info-card .character-description {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.character-info-card .character-description h2 {
+    margin-bottom: 20px;
+}
+
+.character-info-card ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.character-info-card ul li {
+    margin-bottom: 10px;
+}

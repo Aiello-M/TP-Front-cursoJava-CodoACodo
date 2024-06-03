@@ -263,7 +263,7 @@
             <!-- PELICULAS Aclamadas : cloné con JavaScript-->
 
             <!-- PELICULAS Colección -->
-            <div class="peliculas-coleccion">
+            <div class="peliculas-coleccion" >
                 <div class="coleccion-header">
                     <h3 class="coleccion-title"> John Wick - Colección</h3>
                     <p class="coleccion-text">•  John Wick,   •  J.W. Chapter2,  •  J.W. Chapter3,  •  J.W. Chapter4  </p>
@@ -376,6 +376,7 @@
                 </div>
                 
             </div>
+            
 
             
         </section>
@@ -536,6 +537,50 @@
                     <a class="coleccion-btn" href=#><i class="fa-solid fa-play"></i> VER COLECCIÓN</a>
                 </div>
             </div>
+
+            
+        <!-- PERSONAJES Rick and Morty -->
+        <div class="carrousel-container" id="carrousel-personajes">
+            <div class="carrousel-header">
+                <h3 class="carrousel-title"> <span class="destacado">Rick & Morty</span> - Personajes</h3>
+            </div>
+
+            <ul class="personajes-list" id="personajes-list">
+                <!-- Episodios serie Rick and Morty se cargan dinámicamente -->
+            </ul>
+
+            <!-- BOTON -->
+            <div class="series-btn-container">
+                <a class="series-btn" id="prevBtn" href="#carrousel-personajes"> Anterior </a>
+                <span id="pageNumber" class="pageNumber"></span>
+                <a class="series-btn" id="nextBtn" href="#carrousel-personajes"> Siguiente </a>    
+            </div>
+            <a id="inicioPersonajesBtn">Inicio Personajes</a>
+        </div>
+
+        
+        <!-- Card de información del personaje -->
+        <div class="character-info-card">
+            <span class="close-btn">X</span>
+            <div class="character-details">
+                <div class="character-image">
+                    <img class="character-img" alt="Imagen del personaje">
+                </div>
+                <div class="character-description">
+                    <h2><span class="destacado">Personaje</span></h2>
+                    <ul>
+                        <li class="name"></li>
+                        <li class="species"></li>
+                        <li class="status"></li>
+                        <li class="gender"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+
+
+
         </section>
     </main>
 
@@ -583,6 +628,7 @@
     <script> AOS.init();</script>
     <!-- JAVASCRIPT -->
     <script src="./JS/script.js"></script>
+    <script src="./JS/api.js"></script>
 
     
 </body>

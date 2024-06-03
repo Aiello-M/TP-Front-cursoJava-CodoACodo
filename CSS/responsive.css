@@ -71,7 +71,8 @@
         margin-bottom: 2rem;
         margin-left: 0.5rem;
     }
-    .peliculas-list{
+    .peliculas-list,
+    .personajes-list{
         justify-content: space-between;
         gap: 1rem;
     }
@@ -81,7 +82,10 @@
         width: 18.5rem; 
         height: 26.4rem;    
     }
-
+    .personajes-item{
+        width: 18.5rem; 
+        height: 18.5rem;
+    }
 
 
     /* FOOTER */
@@ -111,7 +115,7 @@
     .header{
         width: 100%;
         padding: 1rem 2rem; /* de horizontal 3rem a 1rem */ 
-        height: 18vh; /*altura del header fijo*/
+        height: 15vh; /*altura del header fijo*/
         display: flex; /*para centrar caja */
     }
 
@@ -219,7 +223,8 @@
         height: 19rem;
     }
 
-    .peliculas-list{
+    .peliculas-list,
+    .personajes-list{
         justify-content: center;
         gap: 4rem;
     }
@@ -228,6 +233,12 @@
         width: 20rem; 
         height: 29rem; 
         margin-bottom: -1.8rem;   
+    }
+
+    .personajes-item{
+        width: 20rem; 
+        height: 20rem;
+        margin-bottom: -1.8rem; 
     }
 
     .peliculas-coleccion, .series-coleccion{
@@ -283,6 +294,16 @@
 
     .error-msg{
         width: 24rem;
+    }
+
+
+    .character-info-card{
+        height: fit-content;
+    }
+    .character-info-card .character-details {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
     }
     
 }
@@ -344,7 +365,8 @@
     .aclamadas-title{
         font-size: 2.9rem;
     }
-    .peliculas-list{
+    .peliculas-list,
+    .personajes-list{
         flex-direction: column;
         align-items: center;
         gap: 6rem;
@@ -354,7 +376,10 @@
         width: 27rem;
         height: auto; 
     }
-    
+    .personajes-item{
+        width: 27rem; 
+        height: 27rem;
+    }
 
 
     /* FOOTER */
@@ -450,7 +475,9 @@
         text-align: center;
         font-size: 2.9rem;  
     }
-     .peliculas-list{
+
+    .peliculas-list,
+    .personajes-list{
          flex-direction: column;
          align-items: center;
          gap: 6rem;
@@ -459,6 +486,10 @@
     .peliculas-item{
         width: 27rem;
         height: auto; 
+    }
+    .personajes-item{
+        width: 27rem; 
+        height: auto;
     }
 
 
