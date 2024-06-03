@@ -4,5 +4,5 @@ Trabajo Final Integrador Front-End
 - Integrante: Aiello Mariana
   
 Utilizar HTML - CSS - JavaScript, para replicar la siguiente página Web: https://giselemilagros88.github.io/cac_movies_javaphp/
-- Agregar la sección "Iniciar Sesión" con su correspondiente validación
+- Validación de las páginas de "Iniciar Sesión" y "Registrarse"
 - Falta: agregar una sección "Conexión API", para mostrar los datos traídos de alguna API.
